@@ -1,6 +1,15 @@
 cikl = 2
 while cikl != 0:
-    n = int(input("Введите количество ваших сторудников: "))
+    n = input("Введите количество ваших сторудников: ")
+
+    bukv = n.isdigit()
+    if bukv == False:             #проверка на буквы
+        while bukv == False:
+            print("Введите число от 1 до 1000(цифрами): ")
+            n = input()
+            bukv = str.isnumeric(n)
+    n = int(n)
+
     if n == 0:
         break       #проверка на выход из программы
     elif n < 1 or n > 1000:
@@ -9,7 +18,14 @@ while cikl != 0:
 
     mas_dalnost = []
     for i in range(0, n):
-        dalnost = int(input("Введите расстояния в километрах от работы до дома сотрудника компании: "))
+        dalnost = input("Введите расстояния в километрах от работы до дома сотрудника компании: ")
+        bukv = dalnost.isdigit()
+        if bukv == False:               # проверка на буквы
+            while bukv == False:
+                print("Введите расстояния в километрах от работы до дома сотрудника компании(цифрами): ")
+                dalnost = input()
+                bukv = str.isnumeric(dalnost)
+        dalnost = int(dalnost)
         if dalnost < 1:
             while dalnost < 1:              #проверка на вводимое число
                 dalnost = int(input("Расстояние может быть только положительным ненулевым числом! Введите число: "))
@@ -18,7 +34,15 @@ while cikl != 0:
 
     mas_tarif = []
     for i in range(0, n):
-        tarif = int(input("Введите тариф в рублях за проезд одного километра в такси: "))
+        tarif = input("Введите тариф в рублях за проезд одного километра в такси: ")
+        bukv = tarif.isdigit()
+        if bukv == False:  # проверка на буквы
+            while bukv == False:
+                print("Введите тариф в рублях за проезд одного километра в такси(цифрами): ")
+                print("Введите тариф в рублях за проезд одного километра в такси(цифрами): ")
+                tarif = input()
+                bukv = str.isnumeric(tarif)
+        tarif = int(tarif)
         if tarif < 1:
             while tarif < 1:            #проверка на вводимое число
                 tarif = int(input("Тариф может быть только положительным ненулевым числом! Введите число: "))
