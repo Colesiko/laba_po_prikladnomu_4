@@ -53,7 +53,6 @@ while cikl != 0:
         if bukv == False:  # проверка на буквы
             while bukv == False:
                 print("Введите тариф в рублях за проезд одного километра в такси(цифрами): ")
-                print("Введите тариф в рублях за проезд одного километра в такси(цифрами): ")
                 tarif = input()
                 bukv = str.isnumeric(tarif)
         tarif = int(tarif)
@@ -63,7 +62,6 @@ while cikl != 0:
                 bukv = tarif.isdigit()
                 if bukv == False:  # проверка на буквы
                     while bukv == False:
-                        print("Введите тариф в рублях за проезд одного километра в такси(цифрами): ")
                         print("Введите тариф в рублях за проезд одного километра в такси(цифрами): ")
                         tarif = input()
                         bukv = str.isnumeric(tarif)
@@ -165,3 +163,4 @@ while cikl != 0:
         slova += desatki6[2]
 
     print("Сумма в рублях, которую необходимо заплатить за просчитанный вариант:", summa, "- " + slova)
+    break
